@@ -20,7 +20,8 @@
     "request": "^2.88.2",
     "sequelize": "^6.12.5",
     "socket.io": "2.3.0",
-    "x-xss-protection": "^2.0.0"
+    "x-xss-protection": "^2.0.0",
+    "bostr": "3.0.8"
   },
   "scripts": {
     "start": "nodemon server.js",
