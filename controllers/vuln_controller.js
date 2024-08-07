@@ -74,7 +74,7 @@ const sqli_get = (req, res) => {
 };
 
 const sqli_check_train_get = (req, res) => {
-  const from = req.params.from;
+  // const from = req.params.from;
   const to = req.params.to;
   const q = 'SELECT ntrains FROM trains where from_stnt=\'' + from + '\' and to_stnt=\'' + to + '\';';
   res.header('Content-Type', 'application/json');
@@ -94,10 +94,10 @@ const sqli_fixed_get = (req, res) => {
 };
 
 const fixed_sqli_check_train_get = (req, res) => {
-  const from = req.params.from;
+  // const from = req.params.from;
   const to = req.params.to;
-  Train.findAll({where: {from_stnt: from, to_stnt: to}}).then((trains) => res.send(trains))
-      .catch(() => res.send('Internal error occured!'));
+  // Train.findAll({where: {from_stnt: from, to_stnt: to}}).then((trains) => res.send(trains))
+  //     .catch(() => res.send('Internal error occured!'));
 };
 
 const xxe_get = (req, res) => {
