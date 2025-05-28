@@ -1,6 +1,15 @@
 import express from 'express';
 import multer from 'multer';
 import fs from 'fs';
+import RateLimit from 'express-rate-limit';
+const limiter = new RateLimit({
+  windowMs: parseInt(process.env.WINDOW_MS, 10),
+  max: parseInt(process.env.MAX_IP_REQUESTS, 10),
+  delayMs:parseInt(process.env.DELAY_MS, 10),
+  headers: true
+});
+
+app.use(limiter);
 import path from 'path';
 
 export const app = express();
