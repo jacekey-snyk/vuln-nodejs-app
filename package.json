@@ -19,7 +19,7 @@
     "pg": "^8.7.1",
     "request": "^2.88.2",
     "sequelize": "^6.12.5",
-    "socket.io": "2.3.0",
+    "socket.io": "3.0.0",
     "x-xss-protection": "^2.0.0"
   },
   "scripts": {
